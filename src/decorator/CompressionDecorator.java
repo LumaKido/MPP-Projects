@@ -9,6 +9,9 @@ import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
 import java.util.zip.InflaterInputStream;
 
+//a classe permite que os dados sejam armazenados de forma compactada, 
+//economizando espaço e mantendo a interface original do DataSource
+
 public class CompressionDecorator extends DataSourceDecorator {
     private int compLevel = 6;
 

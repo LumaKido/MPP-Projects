@@ -2,6 +2,8 @@ package decorator;
 
 import java.util.Base64;
 
+//cria o metodo para encriptografar o conteudo do dataSource
+
 public class EncryptionDecorator extends DataSourceDecorator {
 
     public EncryptionDecorator(DataSource source) {

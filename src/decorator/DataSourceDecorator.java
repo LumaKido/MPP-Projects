@@ -1,5 +1,8 @@
 package decorator;
 
+//essa seria a base do decorator podendo adicionar funcionalidades
+//no objeto
+
 public abstract class DataSourceDecorator implements DataSource {
     private DataSource wrappee;
 

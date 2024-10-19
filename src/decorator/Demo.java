@@ -1,5 +1,7 @@
 package decorator;
 
+//aqui coloca as informacoes que ele quer que apareca e roda o codigo
+
 public class Demo {
     public static void main(String[] args) {
         String salaryRecords = "Name,Salary\nJohn Smith,100000\nSteven Jobs,912000";
