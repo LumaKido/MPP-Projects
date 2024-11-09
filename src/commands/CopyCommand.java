@@ -2,13 +2,13 @@ package commands;
 
 public class CopyCommand extends Command {
 
-    public CopyCommand(Editor editor) {
-        super(editor);
+    public CopyCommand(Garcom garcom) {
+        super(garcom);
     }
 
     @Override
     public boolean execute() {
-        editor.clipboard = editor.textField.getSelectedText();
+        garcom.clipboard = garcom.textField.getSelectedText();
         return false;
     }
 }

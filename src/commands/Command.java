@@ -1,19 +1,19 @@
 package commands;
 
 public abstract class Command {
-    public Editor editor;
+    public Garcom garcom;
     private String backup;
 
-    Command(Editor editor) {
-        this.editor = editor;
+    Command(Garcom garcom) {
+        this.garcom = garcom;
     }
 
-    void backup() {
-        backup = editor.textField.getText();
+    void pedido() {
+        backup = garcom.textField.getText();
     }
 
     public void undo() {
-        editor.textField.setText(backup);
+        garcom.textField.setText(backup);
     }
 
     public abstract boolean execute();

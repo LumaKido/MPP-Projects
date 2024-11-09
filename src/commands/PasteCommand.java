@@ -2,16 +2,16 @@ package commands;
 
 public class PasteCommand extends Command {
 
-    public PasteCommand(Editor editor) {
-        super(editor);
+    public PasteCommand(Garcom garcom) {
+        super(garcom);
     }
 
     @Override
     public boolean execute() {
-        if (editor.clipboard == null || editor.clipboard.isEmpty()) return false;
+        if (garcom.clipboard == null || garcom.clipboard.isEmpty()) return false;
 
-        backup();
-        editor.textField.insert(editor.clipboard, editor.textField.getCaretPosition());
+        pedido();
+        garcom.textField.insert(garcom.clipboard, garcom.textField.getCaretPosition());
         return true;
     }
 }

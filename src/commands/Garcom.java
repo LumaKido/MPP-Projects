@@ -5,13 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Editor {
+public class Garcom {
     public JTextArea textField;
     public String clipboard;
     private CommandHistory history = new CommandHistory();
 
     public void init() {
-        JFrame frame = new JFrame("Text editor (type & use buttons, Luke!)");
+        JFrame frame = new JFrame("Lanchonete");
         JPanel content = new JPanel();
         frame.setContentPane(content);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -24,23 +24,23 @@ public class Editor {
         JButton ctrlX = new JButton("Ctrl+X");
         JButton ctrlV = new JButton("Ctrl+V");
         JButton ctrlZ = new JButton("Ctrl+Z");
-        Editor editor = this;
+        Garcom garcom = this;
         ctrlC.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                executeCommand(new CopyCommand(editor));
+                executeCommand(new CopyCommand(garcom));
             }
         });
         ctrlX.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                executeCommand(new CutCommand(editor));
+                executeCommand(new CutCommand(garcom));
             }
         });
         ctrlV.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                executeCommand(new PasteCommand(editor));
+                executeCommand(new PasteCommand(garcom));
             }
         });
         ctrlZ.addActionListener(new ActionListener() {
