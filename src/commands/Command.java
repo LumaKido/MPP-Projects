@@ -1,20 +1,11 @@
 package commands;
 
 public abstract class Command {
-    public Editor editor;
-    private String backup;
+    protected Pedido pedido;
 
-    Command(Editor editor) {
-        this.editor = editor;
+    public Command(Pedido pedido) {
+        this.pedido = pedido;
     }
 
-    void backup() {
-        backup = editor.textField.getText();
-    }
-
-    public void undo() {
-        editor.textField.setText(backup);
-    }
-
-    public abstract boolean execute();
+    public abstract void execute();
 }
