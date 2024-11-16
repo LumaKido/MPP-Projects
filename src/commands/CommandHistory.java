@@ -3,17 +3,15 @@ package commands;
 import java.util.Stack;
 
 public class CommandHistory {
-    private Stack<AdicionarPedidoCommand> history = new Stack<>();
+    private Stack<Command> history = new Stack<>();
 
-    public void push(AdicionarPedidoCommand command) {
-        history.push(command);
+    public void push(Command c) {
+        history.push(c);
     }
 
-    public AdicionarPedidoCommand pop() {
+    public Command pop() {
         return history.pop();
     }
 
-    public boolean isEmpty() {
-        return history.isEmpty();
-    }
+    public boolean isEmpty() { return history.isEmpty(); }
 }
